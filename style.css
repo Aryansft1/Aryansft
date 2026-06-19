@@ -317,7 +317,23 @@ footer {
     background: transparent;
     font-family: var(--font-main);
 }
+a.work-item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+}
 
+a.work-item h3, 
+a.work-item p {
+    color: #111111;
+    text-decoration: none;
+}
+
+a.work-item p {
+    color: #666666;
+}
 .fade-in {
     opacity: 0;
     transform: translateY(20px);

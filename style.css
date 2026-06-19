@@ -143,7 +143,10 @@ nav {
     transform: scale(1.3) translateX(5px);
 }
 
-/* بخش بصری (X و مجسمه) */
+/* ==========================================================================
+   بخش بصری اصلاح شده (انتقال عکس به روی X + کوچک‌تر کردن سایز)
+   ========================================================================== */
+
 .hero-visual {
     position: relative;
     display: flex;
@@ -152,19 +155,7 @@ nav {
     height: 100%;
 }
 
-/* تصویر لایه رو */
-.statue-img {
-    position: absolute;
-    width: 240px; 
-    height: auto;
-    mix-blend-mode: multiply; 
-    pointer-events: none;
-    transform: translateY(10px);
-    transition: transform 0.5s ease-out;
-    z-index: 10; /* تصویر را به لایه بالاتر می‌آورد */
-}
-
-/* حرف X لایه زیرین */
+/* لایه زیرین: حرف X */
 .big-x {
     font-size: 22rem;
     font-weight: 800;
@@ -172,13 +163,47 @@ nav {
     line-height: 1;
     user-select: none;
     position: relative;
-    z-index: 1; /* لایه زیرین */
+    z-index: 1; /* در لایه زیرین قرار می‌گیرد */
+}
+
+/* لایه رویین: تصویر شما که کمی کوچک‌تر شده است */
+.statue-img {
+    position: absolute;
+    width: 190px; /* سایز قبلی 240 بود، الان کوچک‌تر شده تا X دیده شود */
+    height: auto;
+    
+    /* اگر پس‌زمینه عکس شما کاملاً PNG و شفاف است، خط زیر را پاک کنید */
+    mix-blend-mode: multiply; 
+    
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: transform 0.5s ease-out;
+    
+    /* با ایزوله کردن لایه، مطمئن می‌شویم z-index بالاتر از X عمل می‌کند */
+    z-index: 999 !important; 
 }
 
 .hero-visual:hover .statue-img {
-    transform: translateY(-5px) rotate(2deg); /* انیمیشن نرم هنگام هوور */
+    transform: translateY(-5px) rotate(2deg); /* انیمیشن نرم هنگام هوور ماوس */
 }
 
+/* انیمیشن لرزش ملایم عکس */
+.vibrate-subtle {
+    /* انیمیشن را روی لایه بالایی اعمال می‌کنیم */
+    animation: vibrate 6s ease-in-out infinite; 
+}
+
+@keyframes vibrate {
+    0%, 100% {
+        transform: translateY(10px) translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateY(10px) translateX(-2px) rotate(-1deg);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateY(10px) translateX(2px) rotate(1deg);
+    }
+}
 /* فوتر */
 footer {
     display: flex;

@@ -24,7 +24,10 @@ body {
     align-items: center;
     padding: 20px;
 }
-
+.work-item {
+    text-decoration: none;
+    color: inherit;
+}
 .site-wrapper {
     width: 100%;
     max-width: 1280px;

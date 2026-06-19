@@ -80,13 +80,15 @@ nav {
 
 .hero-section {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
     flex-grow: 1;
+    gap: 40px;
+    width: 100%;
 }
 
 .hero-text h1 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -1px;
@@ -102,7 +104,7 @@ nav {
     color: var(--gray-text);
     font-size: 0.95rem;
     line-height: 1.6;
-    max-width: 420px;
+    max-width: 450px;
     margin-bottom: 35px;
 }
 
@@ -144,31 +146,37 @@ nav {
     justify-content: center;
     align-items: center;
     height: 100%;
+    width: 100%;
 }
 
 .big-x {
-    font-size: 22rem;
+    font-size: 20rem;
     font-weight: 800;
     color: #111111;
     line-height: 1;
     user-select: none;
-    position: relative;
+    position: absolute;
     z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
-}
+
 .statue-img {
     position: absolute;
-    width: 170px;
+    width: 220px;
     height: auto;
     pointer-events: none;
     mix-blend-mode: normal !important;
     z-index: 999 !important;
-    transform: translateY(10px);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -45%);
     transition: transform 0.5s ease-out;
 }
 
 .hero-visual:hover .statue-img {
-    transform: translateY(-5px) rotate(2deg);
+    transform: translate(-50%, -50%) rotate(2deg);
 }
 
 footer {
@@ -299,13 +307,13 @@ footer {
 
 @keyframes vibrate {
     0%, 100% {
-        transform: translateY(10px) translateX(0);
+        transform: translate(-50%, -45%) translateX(0);
     }
     10%, 30%, 50%, 70%, 90% {
-        transform: translateY(10px) translateX(-1px) rotate(-0.5deg);
+        transform: translate(-50%, -45%) translateX(-1px) rotate(-0.5deg);
     }
     20%, 40%, 60%, 80% {
-        transform: translateY(10px) translateX(1px) rotate(0.5deg);
+        transform: translate(-50%, -45%) translateX(1px) rotate(0.5deg);
     }
 }
 

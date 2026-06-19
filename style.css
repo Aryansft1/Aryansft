@@ -127,6 +127,11 @@ nav a:hover, nav a.active {
     z-index: 2;       /* متن روی دایره قرار می‌گیرد */
     padding-left: 10px;
 }
+.statue-img {
+    height: 65%; /* از 95% تغییرش بده به 65% تا مجسمه جمع‌وجور و مینی‌مال بشه */
+    object-fit: contain;
+    pointer-events: none;
+}
 .btn-circle {
     position: absolute;
     left: -15px;      /* کمی متمایل به چپ پشت متن */
@@ -149,9 +154,9 @@ nav a:hover, nav a.active {
     bottom: -40px;
     height: 100%;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-end;
-    z-index: 2;        /* لایه جلوتر از X */
+    z-index: 2; 
 }
 
 .statue-img {
@@ -162,19 +167,17 @@ nav a:hover, nav a.active {
 
 .big-x {
     position: absolute;
-    left: 78%;         
-    top: 48%;         
+    left: 76%;         
+    top: 50%;     
     transform: translate(-50%, -50%);
     
-    font-size: 8rem;  
+    font-size: 15rem;  
     font-weight: 900;
-    color: #111111;   
-    z-index: 1;        
+    color: #111111;
+    z-index: 1;  
     opacity: 0.9;      
     pointer-events: none;
     font-family: system-ui, sans-serif;
-    
-    margin-left: 20px;
 }
 
 .works-grid {

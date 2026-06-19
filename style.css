@@ -1,8 +1,8 @@
 :root {
     --bg-color: #fafafa;
     --text-color: #111111;
-    --gray-text: #888888;
-    --font-main: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --gray-text: #666666;
+    --font-main: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
 * {
@@ -16,49 +16,46 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     overflow: hidden;
-    line-height: 1.4;
+    line-height: 1.5;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 20px;
 }
 
-/* ساختار کادر سفید اصلی پورتفولیو */
-.container, .site-wrapper {
+.site-wrapper {
     background: #ffffff;
-    border: 1px solid #eaeaea;
-    border-radius: 20px;
-    width: 90vw;
-    max-width: 1080px;
-    height: 82vh;
+    border: 1px solid #e0e0e0;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 1100px;
+    height: 85vh;
     display: flex;
     flex-direction: column;
-    padding: 45px 50px;
+    padding: 40px;
     position: relative;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    z-index: 10;
+    margin-bottom: 20px;
 }
 
 .logo {
-    font-weight: 700;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
+    font-weight: 800;
+    font-size: 1.2rem;
 }
 
 nav a {
     text-decoration: none;
     color: var(--gray-text);
-    margin-left: 25px;
-    font-size: 0.8rem;
+    margin-left: 20px;
+    font-size: 0.9rem;
     font-weight: 600;
-    letter-spacing: 0.5px;
     transition: color 0.2s ease;
 }
 
@@ -66,78 +63,68 @@ nav a:hover, nav a.active {
     color: var(--text-color);
 }
 
-/* موقعیت‌دهی بخش داخلی محتوا */
-.hero-section, .main-content {
+.hero-section {
     flex: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     width: 100%;
-    margin-top: 20px;
-}
-
-/* استایل اختصاصی صفحه مهارت‌ها جهت جلوگیری از تداخل */
-.main-content {
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    height: 100%;
 }
 
 .hero-text {
-    max-width: 52%;
-    position: relative;
-    z-index: 5;
+    max-width: 50%;
+    z-index: 2;
 }
 
 .hero-text h1 {
-    font-size: 3.4rem;
-    font-weight: 800;
+    font-size: 3.5rem;
+    font-weight: 900;
     line-height: 1.1;
-    margin-bottom: 20px;
-    letter-spacing: -1.5px;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
 }
 
 .hero-text p {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--gray-text);
-    margin-bottom: 35px;
-    line-height: 1.6;
-    max-width: 440px;
+    margin-bottom: 25px;
 }
 
 .dot {
     color: var(--text-color);
 }
 
-/* دکمه VIEW PROJECTS */
-.btn, .view-projects {
+.btn {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
     color: var(--text-color);
     font-weight: 700;
-    font-size: 0.8rem;
-    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.btn-text {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-visual {
     position: absolute;
-    right: 0px;      
-    bottom: 0px;    
-    width: 45%;      
-    height: 85%;     
+    right: -20px;
+    bottom: -40px;
+    height: 100%;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    z-index: 4;      
+    z-index: 1;
 }
 
 .statue-img {
-    height: 100%;
-    width: auto;      /* حفظ تناسب ابعاد عکس */
+    height: 95%;
     object-fit: contain;
-    object-position: right bottom;
     pointer-events: none;
 }
 
@@ -155,33 +142,27 @@ nav a:hover, nav a.active {
     letter-spacing: 20px; 
 }
 
-
-/* استایل گرید صفحه مهارت‌ها */
-.page-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 25px;
-    letter-spacing: -1px;
-}
-
 .works-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     width: 100%;
-    max-height: 46vh;
+    max-width: 100%;
+    max-height: 48vh;
     overflow-y: auto;
     padding-right: 10px;
+    align-items: start;
 }
 
 .work-item {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .work-img {
     width: 100%;
-    height: 165px;
+    height: 170px;
     object-fit: cover;
     border: 1px solid #111111;
     border-radius: 12px;
@@ -189,12 +170,12 @@ nav a:hover, nav a.active {
 }
 
 .work-item:hover .work-img {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
 }
 
 .work-item h3 {
-    font-size: 1.05rem;
-    font-weight: 700;
+    font-size: 1.1rem;
+    font-weight: 800;
     margin-top: 10px;
     margin-bottom: 2px;
 }
@@ -208,24 +189,23 @@ nav a:hover, nav a.active {
     width: 4px;
 }
 
+.works-grid::-webkit-scrollbar-track {
+    background: transparent;
+}
+
 .works-grid::-webkit-scrollbar-thumb {
     background: #111111;
     border-radius: 10px;
 }
 
-/* فوتر پایین کادر سفید */
 footer {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    width: 100%;
+    align-items: center;
     margin-top: auto;
-    z-index: 10;
-}
-
-.social-links {
+    padding-top: 20px;
     font-size: 0.85rem;
-    color: var(--gray-text);
+    font-weight: 500;
 }
 
 .social-links a {
@@ -235,15 +215,9 @@ footer {
 }
 
 .scroll-down {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    font-size: 0.8rem;
     color: var(--gray-text);
-    font-weight: 500;
 }
 
-/* ریسپانسیو مانیتورهای کوچک و تبلت */
 @media (max-width: 900px) {
     .works-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -252,13 +226,7 @@ footer {
         max-width: 100%;
     }
     .statue-img {
-        opacity: 0.12;
-        position: absolute;
-        right: 0;
-        height: 90%;
-    }
-    .big-x {
-        left: 80%;
+        opacity: 0.15;
     }
 }
 
@@ -266,19 +234,13 @@ footer {
     .works-grid {
         grid-template-columns: 1fr;
     }
-    .container, .site-wrapper {
-        padding: 25px;
-        height: 90vh;
-    }
     header, footer {
         flex-direction: column;
-        align-items: center;
-        gap: 12px;
+        gap: 10px;
+        text-align: center;
     }
     nav a {
-        margin: 0 8px;
+        margin: 0 10px;
     }
     .hero-text h1 {
-        font-size: 2.3rem;
-    }
-}
+        font-

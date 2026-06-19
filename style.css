@@ -150,8 +150,8 @@ nav a:hover, nav a.active {
 }
 .hero-visual {
     position: absolute;
-    right: 80px;    
-    bottom: 50px;
+    right: 140px;    
+    bottom: 90px;
     height: 60%;        
     display: flex;
     align-items: center; 

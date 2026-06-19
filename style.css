@@ -104,13 +104,29 @@ nav a:hover, nav a.active {
     font-weight: 700;
     font-size: 0.9rem;
     position: relative;
+    padding: 10px 0; /* حذف پدینگ اضافی */
 }
-
 .btn-text {
     position: relative;
-    z-index: 2;
+    z-index: 2;       /* متن روی دایره قرار می‌گیرد */
+    padding-left: 10px;
 }
-
+.btn-circle {
+    position: absolute;
+    left: -15px;      /* کمی متمایل به چپ پشت متن */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    background-color: rgba(0, 0, 0, 0.06); /* دایره خاکستری ملایم */
+    border-radius: 50%;
+    z-index: 1;       /* لایه عقب دکمه */
+    transition: all 0.3s ease;
+}
+.btn:hover .btn-circle {
+    width: 140px;
+    border-radius: 20px;
+}
 .hero-visual {
     position: absolute;
     right: -20px;
@@ -119,7 +135,7 @@ nav a:hover, nav a.active {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    z-index: 1;
+    z-index: 2;        /* لایه جلوتر از X */
 }
 
 .statue-img {
@@ -130,11 +146,16 @@ nav a:hover, nav a.active {
 
 .big-x {
     position: absolute;
-    left: -60px;
-    top: 40px;
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: var(--gray-text);
+    left: 55%;          /* موقعیت افقی وسط متمایل به راست */
+    top: 50%;           /* موقعیت عمودی وسط */
+    transform: translate(-50%, -50%);
+    font-size: 28rem;   /* اندازه بسیار بزرگ شبیه به طرح */
+    font-weight: 900;
+    color: #111111;     /* رنگ مشکی */
+    z-index: 1;         /* فرستادن به لایه عقب */
+    opacity: 1;         /* کاملا پررنگ */
+    pointer-events: none;
+    font-family: system-ui, sans-serif;
 }
 
 .works-grid {
@@ -208,12 +229,40 @@ footer {
     text-decoration: none;
     font-weight: 600;
 }
-
+.scroll-navigation {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    z-index: 3;
+}
+.scroll-text {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--gray-text);
+    writing-mode: vertical-rl; /* عمودی کردن متن */
+    transform: rotate(180deg); /* جهت درست از بالا به پایین */
+}
+.scroll-line {
+    width: 1px;
+    height: 40px;
+    background-color: var(--gray-text);
+    display: inline-block;
+}
 .scroll-down {
     color: var(--gray-text);
 }
 
 @media (max-width: 900px) {
+    .big-x {
+        font-size: 15rem; /* کوچک‌تر شدن X در تبلت */
+        opacity: 0.2;     /* کم‌رنگ شدن برای خوانایی بهتر متن‌ها */
+    }
+
     .works-grid {
         grid-template-columns: repeat(2, 1fr);
     }

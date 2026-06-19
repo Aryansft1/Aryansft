@@ -129,17 +129,12 @@ nav a:hover, nav a.active {
 }
 
 .big-x {
-    font-size: 22rem; 
-    font-weight: 800;
-    color: #111111;
-    line-height: 1;
-    user-select: none;
-    position: absolute; 
-    z-index: 1;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); 
-    letter-spacing: 20px; 
+    position: absolute;
+    left: -60px;
+    top: 40px;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--gray-text);
 }
 
 .works-grid {
@@ -243,4 +238,6 @@ footer {
         margin: 0 10px;
     }
     .hero-text h1 {
-        font-
+        font-size: 2.5rem;
+    }
+}

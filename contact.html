@@ -7,43 +7,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="site-wrapper">
+        
         <header>
-            <div class="logo">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="20" cy="20" r="18" stroke="black" stroke-width="3"/>
-                    <path d="M20 10V20H30" stroke="black" stroke-width="3" stroke-linecap="round"/>
-                </svg>
-            </div>
+            <div class="logo">< / ></div>
             <nav>
                 <a href="index.html" class="nav-link">HOME</a>
                 <a href="about.html" class="nav-link">ABOUT</a>
-                <a href="works.html" class="nav-link">WORKS</a>
+                <a href="skills.html" class="nav-link">SKILLS</a>
                 <a href="contact.html" class="nav-link active">CONTACT</a>
             </nav>
         </header>
 
-        <main class="inner-page">
-            <h1 class="page-title fade-in">Let's Connect<span class="dot">.</span></h1>
-            <form class="contact-form fade-in delay-1" onsubmit="event.preventDefault();">
-                <div class="form-group">
-                    <label>Your Name</label>
-                    <input type="text" required placeholder="John Doe">
+        <main class="inner-page fade-in">
+            <div class="contact-content">
+                <h1 class="page-title">let's connect<span style="color:#111;">.</span></h1>
+                <p class="page-description">Feel free to reach out to me through any of the platforms below. I'm always open to new projects and collaborations.</p>
+                
+                <div class="contact-links">
+                    <a href="mailto:your-email@example.com" class="contact-item">Email: yazdaniaryan88@gmail.com</a>
+                    <a href="https://t.me/your_username" target="_blank" class="contact-item">Telegram: @Aryansft</a>
+                    <a href="https://github.com/your_username" target="_blank" class="contact-item">GitHub: github.com/Aryansft1</a>
                 </div>
-                <div class="form-group">
-                    <label>Your Email</label>
-                    <input type="email" required placeholder="john@example.com">
-                </div>
-                <div class="form-group">
-                    <label>Message</label>
-                    <textarea rows="5" required placeholder="Tell me about your project..."></textarea>
-                </div>
-                <button type="submit" class="btn">
-                    <span class="btn-text">SEND MESSAGE →</span>
-                </button>
-            </form>
+            </div>
         </main>
+
     </div>
-    <script src="script.js"></script>
+
 </body>
 </html>

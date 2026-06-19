@@ -2,39 +2,59 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>My Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aryansft Portfolio</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="hero">
-  <h1 class="glow">Hi, I'm Aryan 👋</h1>
-  <p class="typing">Full Stack Developer | C++ | C# | Java</p>
-</div>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Aryansft</div>
 
-<div class="section">
-  <h2>🔥 My Projects</h2>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-  <div class="card-container">
-    <div class="card">
-      <h3>Bank System</h3>
-      <p>C++ Console App</p>
-      <a href="#">GitHub</a>
-    </div>
+<!-- HOME -->
+<section id="home" class="section hero">
+  <h1 class="title">Hi, I'm Aryan 👋</h1>
+  <p class="subtitle">Full Stack Developer | C++ | C# | Java</p>
 
-    <div class="card">
-      <h3>Library System</h3>
-      <p>C# Project</p>
-      <a href="#">GitHub</a>
-    </div>
+  <div class="glass-box">
+    <p>Building clean & modern applications with passion.</p>
   </div>
-</div>
+</section>
 
-<div class="section">
-  <h2>📞 Contact</h2>
-  <p>Email: yourmail@gmail.com</p>
-</div>
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <h2 class="section-title">Skills</h2>
 
+  <div class="grid">
+    <div class="card">C++</div>
+    <div class="card">C#</div>
+    <div class="card">Java</div>
+    <div class="card">HTML</div>
+    <div class="card">CSS</div>
+    <div class="card">JavaScript</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2 class="section-title">Contact</h2>
+
+  <div class="glass-box contact">
+    <p>Email: yourmail@gmail.com</p>
+    <p>Telegram: @yourid</p>
+    <p>GitHub: github.com/Aryansft</p>
+  </div>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>

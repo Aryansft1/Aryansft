@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f0f0f;
+  color: white;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(45deg, #ff00cc, #3333ff);
+  animation: bgmove 5s infinite alternate;
+}
+
+@keyframes bgmove {
+  from {filter: hue-rotate(0deg);}
+  to {filter: hue-rotate(90deg);}
+}
+
+.glow {
+  font-size: 50px;
+  text-shadow: 0 0 20px cyan;
+}
+
+/* typing effect */
+.typing {
+  overflow: hidden;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  animation: typing 4s steps(40) infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* cards */
+.section {
+  padding: 50px;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px cyan;
+}

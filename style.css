@@ -154,12 +154,14 @@ nav {
 
 .statue-img {
     position: absolute;
-    width: 240px;
+    width: 240px; 
     height: auto;
-    mix-blend-mode: multiply; /* برای هماهنگ شدن کامل پس زمینه عکس با سایت */
+    mix-blend-mode: multiply; 
     pointer-events: none;
     transform: translateY(10px);
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-out;
+    z-index: 10; 
+    
 }
 
 .big-x {

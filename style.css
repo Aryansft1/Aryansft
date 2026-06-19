@@ -12,7 +12,7 @@
 }
 
 body {
-    font-family: var(--font-main);
+font-family: var(--font-main);
     background-color: var(--bg-color);
     color: var(--text-color);
     overflow: hidden;
@@ -22,6 +22,22 @@ body {
     align-items: center;
     height: 100vh;
     padding: 20px;
+
+    position: relative; 
+    z-index: 0;
+}
+body::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 850px;
+    height: 850px;
+    background-color: rgba(0, 0, 0, 0.03); 
+    border-radius: 50%;
+    z-index: -1; 
+    pointer-events: none;
 }
 
 .site-wrapper {
@@ -146,16 +162,19 @@ nav a:hover, nav a.active {
 
 .big-x {
     position: absolute;
-    left: 55%;          /* موقعیت افقی وسط متمایل به راست */
-    top: 50%;           /* موقعیت عمودی وسط */
+    left: 78%;         
+    top: 48%;         
     transform: translate(-50%, -50%);
-    font-size: 28rem;   /* اندازه بسیار بزرگ شبیه به طرح */
+    
+    font-size: 8rem;  
     font-weight: 900;
-    color: #111111;     /* رنگ مشکی */
-    z-index: 1;         /* فرستادن به لایه عقب */
-    opacity: 1;         /* کاملا پررنگ */
+    color: #111111;   
+    z-index: 1;        
+    opacity: 0.9;      
     pointer-events: none;
     font-family: system-ui, sans-serif;
+    
+    margin-left: 20px;
 }
 
 .works-grid {

@@ -32,8 +32,8 @@ body::before {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 850px;
-    height: 850px;
+    width: 1500px;
+    height: 1500px;
     background-color: rgba(0, 0, 0, 0.03); 
     border-radius: 50%;
     z-index: -1; 

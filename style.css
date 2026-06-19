@@ -152,14 +152,6 @@ nav {
     height: 100%;
 }
 
-.big-x {
-    font-size: 22rem;
-    font-weight: 800;
-    color: #111111;
-    line-height: 1;
-    user-select: none;
-}
-
 .statue-img {
     position: absolute;
     width: 240px;
@@ -168,6 +160,14 @@ nav {
     pointer-events: none;
     transform: translateY(10px);
     transition: transform 0.5s ease;
+}
+
+.big-x {
+    font-size: 22rem;
+    font-weight: 800;
+    color: #111111;
+    line-height: 1;
+    user-select: none;
 }
 
 .hero-visual:hover .statue-img {

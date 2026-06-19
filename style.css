@@ -47,7 +47,13 @@ header {
     align-items: center;
     z-index: 20;
 }
-
+.logo {
+    font-size: 14px;
+    font-weight: 800; 
+    text-transform: lowercase; 
+    letter-spacing: -0.5px; 
+    color: var(--text-color);
+}
 nav {
     display: flex;
     gap: 25px;

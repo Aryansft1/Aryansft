@@ -251,6 +251,10 @@ footer {
     text-decoration: none;
     font-weight: 600;
 }
+
+.scroll-navigation.other-pages-scroll {
+    right: 40px; 
+}
 .scroll-navigation {
     position: absolute;
     right: 0;

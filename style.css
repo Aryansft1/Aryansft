@@ -1,5 +1,5 @@
 /* تعریف فونت و متغیرها */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=400;500;700;800&display=swap');
 
 :root {
     --bg-color: #f7f7f7;
@@ -48,7 +48,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10;
+    z-index: 20;
 }
 
 nav {
@@ -152,6 +152,7 @@ nav {
     height: 100%;
 }
 
+/* تصویر لایه رو */
 .statue-img {
     position: absolute;
     width: 240px; 
@@ -160,16 +161,18 @@ nav {
     pointer-events: none;
     transform: translateY(10px);
     transition: transform 0.5s ease-out;
-    z-index: 10; 
-    
+    z-index: 10; /* تصویر را به لایه بالاتر می‌آورد */
 }
 
+/* حرف X لایه زیرین */
 .big-x {
     font-size: 22rem;
     font-weight: 800;
     color: #111111;
     line-height: 1;
     user-select: none;
+    position: relative;
+    z-index: 1; /* لایه زیرین */
 }
 
 .hero-visual:hover .statue-img {
@@ -181,7 +184,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    z-index: 10;
+    z-index: 20;
 }
 
 .social-links {
@@ -301,29 +304,7 @@ footer {
     }
 }
 
-/* ریسپانسیو برای موبایل */
-@media (max-width: 768px) {
-    body { padding: 10px; }
-    .site-wrapper { height: auto; min-height: 95vh; padding: 20px; }
-    .hero-section { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-    .hero-text p { margin: 0 auto 35px auto; }
-    .big-x { font-size: 14rem; }
-    .statue-img { width: 160px; }
-    .scroll-down { display: none; }
-    .works-grid { grid-template-columns: 1fr; }
-}
-
-.statue-img {
-    position: absolute;
-    width: 240px; 
-    height: auto;
-    mix-blend-mode: multiply;
-    pointer-events: none;
-    transform: translateY(10px);
-    transition: transform 0.5s ease-out; 
-}
-
-
+/* انیمیشن لرزش نرم */
 .vibrate-subtle {
     animation: vibrate 6s ease-in-out infinite; 
 }
@@ -339,3 +320,7 @@ footer {
         transform: translateY(10px) translateX(2px) rotate(1deg);
     }
 }
+
+/* ریسپانسیو برای موبایل */
+@media (max-width: 768px) {
+    body { padding: 10px

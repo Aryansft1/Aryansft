@@ -310,3 +310,30 @@ footer {
     .scroll-down { display: none; }
     .works-grid { grid-template-columns: 1fr; }
 }
+
+.statue-img {
+    position: absolute;
+    width: 240px; 
+    height: auto;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: transform 0.5s ease-out; 
+}
+
+
+.vibrate-subtle {
+    animation: vibrate 6s ease-in-out infinite; 
+}
+
+@keyframes vibrate {
+    0%, 100% {
+        transform: translateY(10px) translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateY(10px) translateX(-2px) rotate(-1deg);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateY(10px) translateX(2px) rotate(1deg);
+    }
+}
